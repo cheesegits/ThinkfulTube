@@ -13,7 +13,6 @@ function getRequest(searchTerm) {
         key: 'AIzaSyCMPZP6_oUwbGrCcNLvZi9XpmH86bk6NPk',
         q: searchTerm
     };
-
     $.getJSON(url, params, function(searchTerm) {
         showResults(searchTerm);
     });
