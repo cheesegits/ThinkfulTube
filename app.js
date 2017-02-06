@@ -6,6 +6,7 @@ $(document).ready(function() {
     });
 });
 
+//API pull
 function getRequest(searchTerm) {
     url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
@@ -18,6 +19,7 @@ function getRequest(searchTerm) {
     });
 }
 
+//Video object
 var searchResult = function(index, value) {
     this.index = index;
     this.title = value.snippet.title;
@@ -25,6 +27,7 @@ var searchResult = function(index, value) {
     this.thumbnail = value.snippet.thumbnails.default.url;
 }
 
+//Display results
 function showResults(results) {
     var html = "";
     var entries = results.items;
